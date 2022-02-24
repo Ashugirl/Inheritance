@@ -1,12 +1,11 @@
 package graphics;
 
-public class Circle {
+public class Circle extends Shape{
     //class variables
     public final static double PI = Math.PI;
 
     private int radius;
-    private int x;
-    private int y;
+
 
     //constructors
 
@@ -33,26 +32,9 @@ public class Circle {
         this.radius = Math.abs(radius);
     }
 
-    public void setPosition(int x, int y){
-        this.x = x;
-        this.y = y;
-    }
 
-    public int getX() {
-        return x;
-    }
 
-    public void setX(int x) {
-        this.x = x;
-    }
 
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
 
     public void grow(int z){
         this.radius = (radius + z);
