@@ -29,13 +29,13 @@ public class Square extends Rectangle{
         super(square);
     }
 
+    public int getSide(){
+        return getHeight();
+    }
+
     public void setSide(int side) {
         super.setHeight(side);
         super.setWidth(side);
-    }
-
-    public static int getCount() {
-        return count;
     }
 
     @Override
@@ -46,14 +46,17 @@ public class Square extends Rectangle{
     public void setWidth(int width){
         setSide(width);
     }
+
+    public static int getCount() {
+        return count;
+    }
+
     /*public void setSide(int side) {
         setHeight(side);
         setWidth(side);
     }*/
 
-    public int getSide(){
-        return getHeight();
-    }
+
 
     /*public void setWidth(int width){
         setSide(width);

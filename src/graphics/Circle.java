@@ -2,10 +2,12 @@ package graphics;
 
 public class Circle extends Shape{
     //class variables
-    public final static double PI = Math.PI;
-
+    public final static int ANGLES = 0;
+    private static int count = 0;
     private int radius;
-
+    {
+        count++;
+    }
 
     //constructors
 
@@ -14,13 +16,16 @@ public class Circle extends Shape{
 
     }
     public Circle(int radius){
-
+        this(radius, 0, 0);
     }
 
     public Circle(int radius, int x, int y) {
         setRadius(radius);
         setPosition(x, y);
 
+    }
+    public Circle(Circle circle){
+        this(circle.radius, circle.getX(), circle.getY());
     }
     //getters and setters
 
@@ -32,20 +37,16 @@ public class Circle extends Shape{
         this.radius = Math.abs(radius);
     }
 
-
-
-
-
-    public void grow(int z){
-        this.radius = (radius + z);
-    }
-
     public double getArea(){
-        return PI * (radius*radius);
+        return Math.PI * (radius*radius);
     }
 
     public double getPerimeter(){
-        return (double) 2 * (PI * radius);
+        return (double) 2 * (Math.PI * radius);
+    }
+
+    public void grow(int d){
+        this.radius = (radius + d);
     }
 }
 

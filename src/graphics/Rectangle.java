@@ -7,6 +7,7 @@ public class Rectangle extends Shape{
 
     // initialize in static codeblock
     public final static int ANGLES;
+
     private static int count;
 
     static{
@@ -45,14 +46,20 @@ public class Rectangle extends Shape{
 
     }
      //setters and getters
+
+
+    public int getHeight() {
+        return this.height;
+    }
+
     public void setHeight(int height) {
         // add logic to avoid negative number, or to change it to a positive number.
         this.height = (height < 0)? - height : height;
 
     }
 
-    public int getHeight() {
-        return this.height;
+    public int getWidth() {
+        return this.width;
     }
 
     public void setWidth(int width) {
@@ -60,16 +67,15 @@ public class Rectangle extends Shape{
          this.width = Math.abs(width);
     }
 
-    public int getWidth() {
-        return this.width;
+    public double getArea(){
+        return (double)this.height*this.width;
+
     }
 
-
-
-
-    public static int getCount(){
-        return count;
+    public double getPerimeter(){
+        return (this.height + this.width) *2;
     }
+
 
     // own methods added
     public void grow(int d){
@@ -78,19 +84,15 @@ public class Rectangle extends Shape{
 
     }
 
+    public static int getCount(){
+        return count;
+    }
+
     /*public void setPosition(int x, int y){
         this.x = x;
         this.y = y;
     }*/
 
-    public double getArea(){
-         return (double)this.height*this.width;
-
-    }
-
-    public double getPerimeter(){
-        return (this.height + this.width) *2;
-    }
 
 
 

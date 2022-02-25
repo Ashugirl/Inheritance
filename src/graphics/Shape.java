@@ -5,7 +5,6 @@ public abstract class Shape {
     private static int count;
     private int x;
     private int y;
-
     {
         count++;
     }
@@ -15,8 +14,8 @@ public abstract class Shape {
    }
 
    public Shape(int x, int y){
-    this.x = x;
-    this.y = y;
+    this.x=x;
+    this.y=y;
    }
 
     public int getX() {
@@ -34,13 +33,10 @@ public abstract class Shape {
     public void setY(int y) {
         this.y = y;
     }
+
     public void setPosition(int x, int y){
         this.x = x;
         this.y = y;
-    }
-
-    public static int getCount(){
-        return count;
     }
 
     public abstract double getArea();
@@ -48,4 +44,7 @@ public abstract class Shape {
     public abstract double getPerimeter();
 
 
+    public static int getCount(){
+        return count;
+    }
 }
